@@ -29,11 +29,11 @@ public class Employee implements Comparable <Employee>{
 
 
     @Override
-    public int compareTo(Employee o) {
+    public int compareTo(Employee o) {          //we compare two Employees. Person already worked on this project do not enter SET
         if (this.getEmpId() == o.getEmpId()) {
             return 0;
         } else {
-            if (this.getDateFrom().isBefore(o.getDateFrom())){
+            if (this.getDateFrom().isBefore(o.getDateFrom())){ //compare elements in treeSet by startDate working on project
                 return -1;
             } else {
                 return 1;
